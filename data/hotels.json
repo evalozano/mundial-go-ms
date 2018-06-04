@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "name": "Clift Hotel",
+        "name": "Bar de prueba",
         "phoneNumber": "(415) 775-4700",
         "description": "A 6-minute walk from Union Square and 4 minutes from a Muni Metro station, this luxury hotel designed by Philippe Starck features an artsy furniture collection in the lobby, including work by Salvador Dali.",
         "address": {
@@ -11,13 +11,13 @@
             "state": "CA",
             "country": "United States",
             "postalCode": "94102",
-            "lat": 37.7867,
-            "lon": -122.4112
+            "lat": 55.715967,
+            "lon": 37.553726
         }
     },
     {
         "id": "2",
-        "name": "W San Francisco",
+        "name": "Bar de prueba 3",
         "phoneNumber": "(415) 777-5300",
         "description": "Less than a block from the Yerba Buena Center for the Arts, this trendy hotel is a 12-minute walk from Union Square.",
         "address": {
@@ -27,10 +27,10 @@
             "state": "CA",
             "country": "United States",
             "postalCode": "94103",
-            "lat": 37.7854,
-            "lon": -122.4005
+            "lat": 55.723487,
+            "lon": 37.560191
         }
-    },
+    }/*,
     {
         "id": "3",
         "name": "Hotel Zetta",
@@ -94,5 +94,5 @@
             "lat": 37.7863,
             "lon": -122.4015
         }
-    }
+    }*/
 ]

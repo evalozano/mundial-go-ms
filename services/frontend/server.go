@@ -31,6 +31,8 @@ type Server struct {
 func (s *Server) Run(port int) error {
 	mux := tracing.NewServeMux(s.tracer)
 	mux.Handle("/", http.FileServer(http.Dir("services/frontend/static")))
+
+	// API
 	mux.Handle("/hotels", http.HandlerFunc(s.searchHandler))
 
 	return http.ListenAndServe(fmt.Sprintf(":%d", port), mux)
@@ -50,8 +52,8 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 	// search for best hotels
 	// TODO(hw): allow lat/lon from input params
 	searchResp, err := s.searchClient.Nearby(ctx, &search.NearbyRequest{
-		Lat:     37.7749,
-		Lon:     -122.4194,
+		Lat:     55.715967,
+		Lon:     37.553726,
 		InDate:  inDate,
 		OutDate: outDate,
 	})
