@@ -10,8 +10,8 @@
 <script>
     var points = {};
 
-    points['Moscu'] = [55.715967, 37.553726]
-    points['Jimki'] = [55.894514, 37.442094]
+    points['Sonchi'] = [43.402259, 39.955280]
+    points['Arena'] = [43.408966, 39.953100]
 
     function initMap() {
         var infowindow = new google.maps.InfoWindow();
@@ -19,8 +19,8 @@
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: new google.maps.LatLng(
-                    points['Moscu'][0],
-                    points['Moscu'][1]
+                    points['Sonchi'][0],
+                    points['Sonchi'][1]
             )
         });
 
@@ -35,7 +35,7 @@
             infowindow.open(map);
         });
 
-        map.data.loadGeoJson('/hotels?inDate=2018-06-12&outDate=2018-06-16');
+        map.data.loadGeoJson('/hotels?inDate=2015-04-09&outDate=2015-04-10');
     }
 </script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&callback=initMap" async defer></script>

@@ -1,98 +1,83 @@
 [
     {
         "id": "1",
-        "name": "Bar de prueba",
-        "phoneNumber": "(415) 775-4700",
-        "description": "A 6-minute walk from Union Square and 4 minutes from a Muni Metro station, this luxury hotel designed by Philippe Starck features an artsy furniture collection in the lobby, including work by Salvador Dali.",
+        "id": "1",
+        "name": "Kafe Parus",
+        "phoneNumber": "+7 862 226-56-81",
+        "description": "A 12-minute walk from Olympic Ave.",
         "address": {
-            "streetNumber": "495",
-            "streetName": "Geary St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
-            "postalCode": "94102",
-            "lat": 55.715967,
-            "lon": 37.553726
+            "streetNumber": "7",
+            "streetName": "Ulitsa Parusnaya",
+            "city": "Krasnodarskiy kray",
+            "state": "RU",
+            "country": "Rusia",
+            "postalCode": "354340",
+            "lat": 43.404344,
+            "lon": 39.945902
         }
     },
     {
         "id": "2",
-        "name": "Bar de prueba 3",
-        "phoneNumber": "(415) 777-5300",
-        "description": "Less than a block from the Yerba Buena Center for the Arts, this trendy hotel is a 12-minute walk from Union Square.",
+        "name": "La Punto Restaurant",
+        "phoneNumber": "+7 988 234-64-44",
+        "description": "A 5-minute walk from Ulitsa Mezhdunarodnaya",
         "address": {
-            "streetNumber": "181",
+            "streetNumber": "2",
             "streetName": "3rd St",
             "city": "San Francisco",
             "state": "CA",
             "country": "United States",
             "postalCode": "94103",
-            "lat": 55.723487,
-            "lon": 37.560191
+            "lat": 43.403758,
+            "lon": 39.961621
         }
-    }/*,
+    },
     {
         "id": "3",
-        "name": "Hotel Zetta",
-        "phoneNumber": "(415) 543-8555",
-        "description": "A 3-minute walk from the Powell Street cable-car turnaround and BART rail station, this hip hotel 9 minutes from Union Square combines high-tech lodging with artsy touches.",
+        "name": "Oscar Lounge Club",
+        "phoneNumber": "+7 800 234-57-87",
+        "description": "A 27-minute walk from Olympic Ave. or 39-minute by bus 125s/135 from Fisht-Arena.",
         "address": {
-            "streetNumber": "55",
-            "streetName": "5th St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
-            "postalCode": "94103",
-            "lat": 37.7834,
-            "lon": -122.4071
+            "streetNumber": "1",
+            "streetName": "Bul var Morskoy",
+            "city": "Krasnodarskiy kray",
+            "state": "RU",
+            "country": "Rusia",
+            "postalCode": "354340",
+            "lat": 43.412195,
+            "lon": 39.935700
         }
     },
     {
         "id": "4",
-        "name": "Hotel Vitale",
-        "phoneNumber": "(415) 278-3700",
-        "description": "This waterfront hotel with Bay Bridge views is 3 blocks from the Financial District and a 4-minute walk from the Ferry Building.",
+        "name": "English Pub Prince of Wales",
+        "phoneNumber": "+7 938 455-00-58",
+        "description": "A 27-minute walk from Olympic Ave. or 39-minute by bus 125s/135 from Fisht-Arena.",
         "address": {
-            "streetNumber": "8",
-            "streetName": "Mission St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
+            "streetNumber": "1",
+            "streetName": "24 Bul var Morskoy",
+            "city": "Krasnodarskiy kray",
+            "state": "RU",
+            "country": "Rusia",
             "postalCode": "94105",
-            "lat": 37.7936,
-            "lon": -122.3930
+            "lat": 43.412658,
+            "lon": 39.936563
         }
     },
     {
         "id": "5",
-        "name": "Phoenix Hotel",
-        "phoneNumber": "(415) 776-1380",
-        "description": "Located in the Tenderloin neighborhood, a 10-minute walk from a BART rail station, this retro motor lodge has hosted many rock musicians and other celebrities since the 1950s. It’s a 4-minute walk from the historic Great American Music Hall nightclub.",
+        "name": "O'Sullivan's Pub",
+        "phoneNumber": "+7 938 455-00-74",
+        "description": "A 25-minute walk from Olympic Ave. or 32-minute by bus 125s from Fisht-Arena.",
         "address": {
-            "streetNumber": "601",
-            "streetName": "Eddy St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
+            "streetNumber": "55",
+            "streetName": "65 Let Pobedy St",
+            "city": "Krasnodarskiy kray",
+            "state": "RU",
+            "country": "Rusia",
             "postalCode": "94109",
-            "lat": 37.7831,
-            "lon": -122.4181
+            "lat": 43.398551,
+            "lon": 39.975695
         }
-    },
-    {
-        "id": "6",
-        "name": "St. Regis San Francisco",
-        "phoneNumber": "(415) 284-4000",
-        "description": "St. Regis Museum Tower is a 42-story, 484 ft skyscraper in the South of Market district of San Francisco, California, adjacent to Yerba Buena Gardens, Moscone Center, PacBell Building and the San Francisco Museum of Modern Art.",
-        "address": {
-            "streetNumber": "125",
-            "streetName": "3rd St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
-            "postalCode": "94109",
-            "lat": 37.7863,
-            "lon": -122.4015
-        }
-    }*/
+    }
 ]

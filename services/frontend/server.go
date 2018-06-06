@@ -52,8 +52,8 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 	// search for best hotels
 	// TODO(hw): allow lat/lon from input params
 	searchResp, err := s.searchClient.Nearby(ctx, &search.NearbyRequest{
-		Lat:     55.715967,
-		Lon:     37.553726,
+		Lat:     37.7749,
+		Lon:     -122.4194,
 		InDate:  inDate,
 		OutDate: outDate,
 	})
