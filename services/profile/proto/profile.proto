@@ -7,15 +7,15 @@ service Profile {
 }
 
 message Request {
-  repeated string hotelIds = 1;
+  repeated string pubIds = 1;
   string locale = 2;
 }
 
 message Result {
-  repeated Hotel hotels = 1;
+  repeated Pub pubs = 1;
 }
 
-message Hotel {
+message Pub {
   string id = 1;
   string name = 2;
   string phoneNumber = 3;

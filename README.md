@@ -8,9 +8,7 @@ leverages [gRPC][1] for inter-service communication.
 * Consul for service discovery
 * Jaeger for request tracing
 
-The example application plots Hotel locations on a Google map:
-
-<img width="865" alt="screen shot 2016-11-07 at 9 31 12 pm" src="https://cloud.githubusercontent.com/assets/739782/20087958/de0ef9b4-a531-11e6-953a-4425fe445883.png">
+The example application plots Pub locations on a Google map:
 
 The web page makes an HTTP request to the API Endpoint which in turn spawns a number of RPC requests to the backend services.
  
@@ -78,6 +76,10 @@ Install the protoc-gen libraries:
 
     $ go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
 
+If changes are made to files /data, install go-bindata https://github.com/jteeuwen/go-bindata
+
+NOTE: Review PATH and GOPATH that have been included correctly
+
 Clone the repository:
 
     $ git clone git@github.com:harlow/mundial-go-ms.git
@@ -88,42 +90,42 @@ To make the demo as straigforward as possible; [Docker Compose](https://docs.doc
 
     $ make run
 
-Vist the web page in a browser:
+Visit the web page in a browser:
 
 [http://localhost:5000/](http://localhost:5000/)
 
 cURL the API endpoint and receive GeoJSON response:
 
-    $ curl "http://localhost:5000/hotels?inDate=2015-04-09&outDate=2015-04-10" 
+    $ curl "http://localhost:5000/pubs?inDate=2018-06-09&outDate=2018-06-12"
 
 The JSON response:
 
 ```json
 {
-	"type": "FeatureCollection",
 	"features": [{
-		"id": "5",
-		"type": "Feature",
-		"properties": {
-			"name": "Phoenix Hotel",
-			"phone_number": "(415) 776-1380"
-		},
 		"geometry": {
-			"type": "Point",
-			"coordinates": [-122.4181, 37.7831]
-		}
-	}, {
+			"coordinates": [39.9357, 43.412193],
+			"type": "Point"
+		},
 		"id": "3",
-		"type": "Feature",
 		"properties": {
-			"name": "Hotel Zetta",
-			"phone_number": "(415) 543-8555"
+			"name": "Oscar Lounge Club",
+			"phone_number": "+7 800 234-57-87"
 		},
+		"type": "Feature"
+	}, {
 		"geometry": {
-			"type": "Point",
-			"coordinates": [-122.4071, 37.7834]
-		}
-	}]
+			"coordinates": [39.945904, 43.404343],
+			"type": "Point"
+		},
+		"id": "1",
+		"properties": {
+			"name": "Kafe Parus",
+			"phone_number": "+7 862 226-56-81"
+		},
+		"type": "Feature"
+	}],
+	"type": "FeatureCollection"
 }
 ```
 
@@ -132,6 +134,13 @@ The JSON response:
 If changes are made to the Protocol Buffer files use the Makefile to regenerate:
 
     $ make proto
+
+#### Data
+If changes are made to the /data files use the Makefile to regenerate:
+
+   $ make data
+ or
+   go-bindata -o data/bindata.go -pkg data data/*.json
 
 ## Credits
 
@@ -150,6 +159,3 @@ Thanks to all the [contributors][6]. This codebase was heavily inspired by the f
 
 <img width="50" height="50" src="https://s3.amazonaws.com/tracking.events/hw-logo.png">
 
-> [www.hward.com](http://www.hward.com) &nbsp;&middot;&nbsp;
-> GitHub [@harlow](https://github.com/harlow) &nbsp;&middot;&nbsp;
-> Twitter [@harlow_ward](https://twitter.com/harlow_ward)

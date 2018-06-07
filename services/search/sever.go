@@ -46,9 +46,9 @@ func (s *Server) Run(port int) error {
 	return srv.Serve(lis)
 }
 
-// Nearby returns ids of nearby hotels ordered by ranking algo
+// Nearby returns ids of nearby pubs ordered by ranking algo
 func (s *Server) Nearby(ctx context.Context, req *pb.NearbyRequest) (*pb.SearchResult, error) {
-	// find nearby hotels
+	// find nearby pubs
 	nearby, err := s.geoClient.Nearby(ctx, &geo.Request{
 		Lat: req.Lat,
 		Lon: req.Lon,
@@ -57,9 +57,9 @@ func (s *Server) Nearby(ctx context.Context, req *pb.NearbyRequest) (*pb.SearchR
 		log.Fatalf("nearby error: %v", err)
 	}
 
-	// find rates for hotels
+	// find rates for pubs
 	rates, err := s.rateClient.GetRates(ctx, &rate.Request{
-		HotelIds: nearby.HotelIds,
+		PubIds: nearby.PubIds,
 		InDate:   req.InDate,
 		OutDate:  req.OutDate,
 	})
@@ -67,7 +67,7 @@ func (s *Server) Nearby(ctx context.Context, req *pb.NearbyRequest) (*pb.SearchR
 		log.Fatalf("rates error: %v", err)
 	}
 
-	// TODO(hw): add simple ranking algo to order hotel ids:
+	// TODO(hw): add simple ranking algo to order pub ids:
 	// * geo distance
 	// * price (best discount?)
 	// * reviews
@@ -75,7 +75,7 @@ func (s *Server) Nearby(ctx context.Context, req *pb.NearbyRequest) (*pb.SearchR
 	// build the response
 	res := new(pb.SearchResult)
 	for _, ratePlan := range rates.RatePlans {
-		res.HotelIds = append(res.HotelIds, ratePlan.HotelId)
+		res.PubIds = append(res.PubIds, ratePlan.PubId)
 	}
 	return res, nil
 }

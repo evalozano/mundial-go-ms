@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package search;
 
-// Search service returns best hotel chocies for a user.
+// Search service returns best pub chocies for a user.
 service Search {
   rpc Nearby(NearbyRequest) returns (SearchResult);
   // rpc City(CityRequest) returns (SearchResult);
@@ -23,5 +23,5 @@ message NearbyRequest {
 // }
 
 message SearchResult {
-  repeated string hotelIds = 1;
+  repeated string pubIds = 1;
 }

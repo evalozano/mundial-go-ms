@@ -18,13 +18,13 @@ import (
 func NewServer(tr opentracing.Tracer) *Server {
 	return &Server{
 		tracer: tr,
-		hotels: loadProfiles("data/hotels.json"),
+		pubs: loadProfiles("data/pubs.json"),
 	}
 }
 
 // Server implements the profile service
 type Server struct {
-	hotels map[string]*pb.Hotel
+	pubs map[string]*pb.Pub
 	tracer opentracing.Tracer
 }
 
@@ -44,28 +44,28 @@ func (s *Server) Run(port int) error {
 	return srv.Serve(lis)
 }
 
-// GetProfiles returns hotel profiles for requested IDs
+// GetProfiles returns pub profiles for requested IDs
 func (s *Server) GetProfiles(ctx context.Context, req *pb.Request) (*pb.Result, error) {
 	res := new(pb.Result)
-	for _, i := range req.HotelIds {
-		res.Hotels = append(res.Hotels, s.hotels[i])
+	for _, i := range req.PubIds {
+		res.Pubs = append(res.Pubs, s.pubs[i])
 	}
 	return res, nil
 }
 
-// loadProfiles loads hotel profiles from a JSON file.
-func loadProfiles(path string) map[string]*pb.Hotel {
+// loadProfiles loads pub profiles from a JSON file.
+func loadProfiles(path string) map[string]*pb.Pub {
 	file := data.MustAsset(path)
 
 	// unmarshal json profiles
-	hotels := []*pb.Hotel{}
-	if err := json.Unmarshal(file, &hotels); err != nil {
+	pubs := []*pb.Pub{}
+	if err := json.Unmarshal(file, &pubs); err != nil {
 		log.Fatalf("Failed to load json: %v", err)
 	}
 
-	profiles := make(map[string]*pb.Hotel)
-	for _, hotel := range hotels {
-		profiles[hotel.Id] = hotel
+	profiles := make(map[string]*pb.Pub)
+	for _, pub := range pubs {
+		profiles[pub.Id] = pub
 	}
 
 	return profiles

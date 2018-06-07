@@ -50,7 +50,7 @@ func (s *Server) Run(port int) error {
 	return srv.Serve(lis)
 }
 
-// Nearby returns all hotels within a given distance.
+// Nearby returns all pubs within a given distance.
 func (s *Server) Nearby(ctx context.Context, req *pb.Request) (*pb.Result, error) {
 	var (
 		points = s.getNearbyPoints(ctx, float64(req.Lat), float64(req.Lon))
@@ -58,7 +58,7 @@ func (s *Server) Nearby(ctx context.Context, req *pb.Request) (*pb.Result, error
 	)
 
 	for _, p := range points {
-		res.HotelIds = append(res.HotelIds, p.Id())
+		res.PubIds = append(res.PubIds, p.Id())
 	}
 
 	return res, nil
@@ -87,7 +87,7 @@ func newGeoIndex(path string) *geoindex.ClusteringIndex {
 	// unmarshal json points
 	var points []*point
 	if err := json.Unmarshal(file, &points); err != nil {
-		log.Fatalf("Failed to load hotels: %v", err)
+		log.Fatalf("Failed to load pubs: %v", err)
 	}
 
 	// add points to index
@@ -100,7 +100,7 @@ func newGeoIndex(path string) *geoindex.ClusteringIndex {
 }
 
 type point struct {
-	Pid  string  `json:"hotelId"`
+	Pid  string  `json:"pubId"`
 	Plat float64 `json:"lat"`
 	Plon float64 `json:"lon"`
 }

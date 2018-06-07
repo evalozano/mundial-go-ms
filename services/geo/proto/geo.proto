@@ -3,7 +3,7 @@ syntax = "proto3";
 package geo;
 
 service Geo {
-  // Finds the hotels contained nearby the current lat/lon.
+  // Finds the pubs contained nearby the current lat/lon.
   rpc Nearby(Request) returns (Result);
 }
 
@@ -14,5 +14,5 @@ message Request {
 }
 
 message Result {
-  repeated string hotelIds = 1;
+  repeated string pubIds = 1;
 }

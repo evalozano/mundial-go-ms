@@ -33,7 +33,7 @@ func (s *Server) Run(port int) error {
 	mux.Handle("/", http.FileServer(http.Dir("services/frontend/static")))
 
 	// API
-	mux.Handle("/hotels", http.HandlerFunc(s.searchHandler))
+	mux.Handle("/pubs", http.HandlerFunc(s.searchHandler))
 
 	return http.ListenAndServe(fmt.Sprintf(":%d", port), mux)
 }
@@ -49,7 +49,7 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// search for best hotels
+	// search for best pubs
 	// TODO(hw): allow lat/lon from input params
 	searchResp, err := s.searchClient.Nearby(ctx, &search.NearbyRequest{
 		Lat:     37.7749,
@@ -68,9 +68,9 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 		locale = "en"
 	}
 
-	// hotel profiles
+	// pub profiles
 	profileResp, err := s.profileClient.GetProfiles(ctx, &profile.Request{
-		HotelIds: searchResp.HotelIds,
+		PubIds: searchResp.PubIds,
 		Locale:   locale,
 	})
 	if err != nil {
@@ -78,12 +78,12 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	json.NewEncoder(w).Encode(geoJSONResponse(profileResp.Hotels))
+	json.NewEncoder(w).Encode(geoJSONResponse(profileResp.Pubs))
 }
 
 // return a geoJSON response that allows google map to plot points directly on map
 // https://developers.google.com/maps/documentation/javascript/datalayer#sample_geojson
-func geoJSONResponse(hs []*profile.Hotel) map[string]interface{} {
+func geoJSONResponse(hs []*profile.Pub) map[string]interface{} {
 	fs := []interface{}{}
 
 	for _, h := range hs {

@@ -1,41 +1,54 @@
 [
-    {
-        "hotelId": "1",
-        "code": "RACK",
-        "inDate": "2018-06-09",
-        "outDate": "2018-06-10",
-        "roomType": {
-          "bookableRate": 109.00,
-          "code": "KNG",
-          "description": "King sized bed",
-          "totalRate": 109.00,
-          "totalRateInclusive": 123.17
-        }
-    },
-    {
-        "hotelId": "2",
-        "code": "RACK",
-        "inDate": "2018-06-09",
-        "outDate": "2018-06-10",
-        "roomType": {
-          "bookableRate": 139.00,
-          "code": "QN",
-          "description": "Queen sized bed",
-          "totalRate": 139.00,
-          "totalRateInclusive": 153.09
-        }
-    },
-    {
-        "hotelId": "3",
-        "code": "RACK",
-        "inDate": "2018-06-09",
-        "outDate": "2018-06-10",
-        "roomType": {
-          "bookableRate": 109.00,
-          "code": "KNG",
-          "description": "King sized bed",
-          "totalRate": 109.00,
-          "totalRateInclusive": 123.17
-        }
+  {
+    "pubId": "1",
+    "code": "RACK",
+    "inDate": "2018-06-09",
+    "outDate": "2018-06-12",
+    "roomType": {
+      "bookableRate": 109.00,
+      "code": "KNG",
+      "description": "King sized bed",
+      "totalRate": 109.00,
+      "totalRateInclusive": 123.17
     }
+  },
+  {
+    "pubId": "2",
+    "code": "RACK",
+    "inDate": "2018-06-09",
+    "outDate": "2018-06-12",
+    "roomType": {
+      "bookableRate": 139.00,
+      "code": "QN",
+      "description": "Queen sized bed",
+      "totalRate": 139.00,
+      "totalRateInclusive": 153.09
+    }
+  },
+  {
+    "pubId": "3",
+    "code": "RACK",
+    "inDate": "2018-06-09",
+    "outDate": "2018-06-12",
+    "roomType": {
+      "bookableRate": 109.00,
+      "code": "KNG",
+      "description": "King sized bed",
+      "totalRate": 109.00,
+      "totalRateInclusive": 123.17
+    }
+  },
+  {
+    "pubId": "4",
+    "code": "RACK",
+    "inDate": "2018-06-09",
+    "outDate": "2018-06-12",
+    "roomType": {
+      "bookableRate": 109.00,
+      "code": "KNG",
+      "description": "King sized bed",
+      "totalRate": 109.00,
+      "totalRateInclusive": 123.17
+    }
+  }
 ]

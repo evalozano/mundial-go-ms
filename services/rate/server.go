@@ -44,13 +44,13 @@ func (s *Server) Run(port int) error {
 	return srv.Serve(lis)
 }
 
-// GetRates gets rates for hotels for specific date range.
+// GetRates gets rates for pubs for specific date range.
 func (s *Server) GetRates(ctx context.Context, req *pb.Request) (*pb.Result, error) {
 	res := new(pb.Result)
 
-	for _, hotelID := range req.HotelIds {
+	for _, pubID := range req.PubIds {
 		stay := stay{
-			HotelID: hotelID,
+			PubID: pubID,
 			InDate:  req.InDate,
 			OutDate: req.OutDate,
 		}
@@ -74,7 +74,7 @@ func loadRateTable(path string) map[stay]*pb.RatePlan {
 	rateTable := make(map[stay]*pb.RatePlan)
 	for _, ratePlan := range rates {
 		stay := stay{
-			HotelID: ratePlan.HotelId,
+			PubID: ratePlan.PubId,
 			InDate:  ratePlan.InDate,
 			OutDate: ratePlan.OutDate,
 		}
@@ -85,7 +85,7 @@ func loadRateTable(path string) map[stay]*pb.RatePlan {
 }
 
 type stay struct {
-	HotelID string
+	PubID string
 	InDate  string
 	OutDate string
 }
