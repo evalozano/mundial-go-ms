@@ -11,6 +11,7 @@ import (
 const geoSrvName = "srv-geo"
 
 func runGeo(port int, consul *registry.Client, jaegeraddr string) error {
+	// We initialize the trace service
 	tracer, err := tracing.Init("geo", jaegeraddr)
 	if err != nil {
 		return fmt.Errorf("tracing init error: %v", err)

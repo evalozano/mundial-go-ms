@@ -14,6 +14,7 @@ import (
 const searchSrvName = "srv-search"
 
 func runSearch(port int, consul *registry.Client, jaegeraddr string) error {
+	// We initialize the trace service 
 	tracer, err := tracing.Init("search", jaegeraddr)
 	if err != nil {
 		return fmt.Errorf("tracing init error: %v", err)

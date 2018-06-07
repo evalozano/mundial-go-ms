@@ -12,6 +12,8 @@ import (
 )
 
 func runFrontend(port int, consul *registry.Client, jaegeraddr string) error {
+
+	// We initialize the trace service
 	tracer, err := tracing.Init("frontend", jaegeraddr)
 	if err != nil {
 		return fmt.Errorf("tracing init error: %v", err)

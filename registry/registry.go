@@ -7,6 +7,7 @@ import (
 	consul "github.com/hashicorp/consul/api"
 	"github.com/segmentio/ksuid"
 )
+// The registry package is used for registering services
 
 // NewClient returns a new Client with connection to consul
 func NewClient(addr string) (*Client, error) {

@@ -136,6 +136,7 @@ If changes are made to the Protocol Buffer files use the Makefile to regenerate:
     $ make proto
 
 #### Data
+
 If changes are made to the /data files use the Makefile to regenerate:
 
    $ make data

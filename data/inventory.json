@@ -1,54 +1,46 @@
 [
   {
     "pubId": "1",
-    "code": "RACK",
+    "code": "TOP",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "roomType": {
-      "bookableRate": 109.00,
+      "review": 109.00,
       "code": "KNG",
-      "description": "King sized bed",
-      "totalRate": 109.00,
-      "totalRateInclusive": 123.17
+      "description": "Maximum 5 people to reserve"
     }
   },
   {
     "pubId": "2",
-    "code": "RACK",
+    "code": "TOP",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "roomType": {
-      "bookableRate": 139.00,
+      "review": 139.00,
       "code": "QN",
-      "description": "Queen sized bed",
-      "totalRate": 139.00,
-      "totalRateInclusive": 153.09
+      "description": "Maximum 10 people to reserve"
     }
   },
   {
     "pubId": "3",
-    "code": "RACK",
+    "code": "TOP",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "roomType": {
-      "bookableRate": 109.00,
+      "review": 111.00,
       "code": "KNG",
-      "description": "King sized bed",
-      "totalRate": 109.00,
-      "totalRateInclusive": 123.17
+      "description": "Maximum 5 people to reserve"
     }
   },
   {
     "pubId": "4",
-    "code": "RACK",
+    "code": "TOP",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "roomType": {
-      "bookableRate": 109.00,
+      "review": 109.00,
       "code": "KNG",
-      "description": "King sized bed",
-      "totalRate": 109.00,
-      "totalRateInclusive": 123.17
+      "description": "Maximum 5 people to reserve"
     }
   }
 ]
