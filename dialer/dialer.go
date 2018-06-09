@@ -27,6 +27,7 @@ func WithBalancer(cc *consul.Client) DialOption {
 		if err != nil {
 			return nil, err
 		}
+		// Recommended WithBalancerName, but it is experimental
 		return grpc.WithBalancer(grpc.RoundRobin(r)), nil
 	}
 }

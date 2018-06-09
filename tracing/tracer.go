@@ -9,6 +9,7 @@ import (
 )
 
 // Init returns a newly configured tracer
+
 func Init(serviceName, host string) (opentracing.Tracer, error) {
 	cfg := config.Configuration{
 		Sampler: &config.SamplerConfig{
@@ -28,3 +29,4 @@ func Init(serviceName, host string) (opentracing.Tracer, error) {
 	}
 	return tracer, nil
 }
+
