@@ -50,7 +50,7 @@ func (c *Client) Register(name string, port int) (string, error) {
 	return uuid, c.Agent().ServiceRegister(reg)
 }
 
-// Deregister removes the service address from registry
+// Unregister removes the service address from registry
 func (c *Client) Deregister(id string) error {
 	return c.Agent().ServiceDeregister(id)
 }

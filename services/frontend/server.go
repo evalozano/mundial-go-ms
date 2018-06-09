@@ -52,8 +52,8 @@ func (s *Server) searchHandler(w http.ResponseWriter, r *http.Request) {
 	// search for best pubs
 	// TODO(hw): allow lat/lon from input params
 	searchResp, err := s.searchClient.Nearby(ctx, &search.NearbyRequest{
-		Lat:     37.7749,
-		Lon:     -122.4194,
+		Lat:     43.402259,
+		Lon:     39.955290,
 		InDate:  inDate,
 		OutDate: outDate,
 	})

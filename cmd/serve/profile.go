@@ -10,7 +10,6 @@ import (
 
 const profileSrvName = "srv-profile"
 
-//
 func runProfile(port int, consul *registry.Client, jaegeraddr string) error {
 	// We initialize the trace service
 	tracer, err := tracing.Init("profile", jaegeraddr)
@@ -24,7 +23,7 @@ func runProfile(port int, consul *registry.Client, jaegeraddr string) error {
 		return fmt.Errorf("failed to register service: %v", err)
 	}
 
-	// deregister of consult
+	//Unregister of consult
 	defer consul.Deregister(id)
 
 	srv := profile.NewServer(tracer)

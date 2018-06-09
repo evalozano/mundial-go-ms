@@ -5,8 +5,8 @@
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "pubType": {
-      "review": 109.00,
-      "code": "KNG",
+      "review": 4.5,
+      "code": "CA",
       "description": "Maximum 5 people to reserve"
     }
   },
@@ -16,8 +16,8 @@
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "pubType": {
-      "review": 139.00,
-      "code": "QN",
+      "review": 4.7,
+      "code": "RE",
       "description": "Maximum 10 people to reserve"
     }
   },
@@ -27,8 +27,8 @@
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "pubType": {
-      "review": 111.00,
-      "code": "KNG",
+      "review": 4.5,
+      "code": "CO",
       "description": "Maximum 5 people to reserve"
     }
   },
@@ -38,8 +38,8 @@
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
     "pubType": {
-      "review": 109.00,
-      "code": "KNG",
+      "review": 4.6,
+      "code": "CO",
       "description": "Maximum 5 people to reserve"
     }
   }
