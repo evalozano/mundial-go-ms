@@ -1,10 +1,10 @@
 [
   {
     "pubId": "1",
-    "code": "TOP",
+    "code": "CAFETERIA",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
-    "roomType": {
+    "pubType": {
       "review": 109.00,
       "code": "KNG",
       "description": "Maximum 5 people to reserve"
@@ -12,10 +12,10 @@
   },
   {
     "pubId": "2",
-    "code": "TOP",
+    "code": "RESTAURANT",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
-    "roomType": {
+    "pubType": {
       "review": 139.00,
       "code": "QN",
       "description": "Maximum 10 people to reserve"
@@ -23,10 +23,10 @@
   },
   {
     "pubId": "3",
-    "code": "TOP",
+    "code": "COCKTAIL",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
-    "roomType": {
+    "pubType": {
       "review": 111.00,
       "code": "KNG",
       "description": "Maximum 5 people to reserve"
@@ -34,10 +34,10 @@
   },
   {
     "pubId": "4",
-    "code": "TOP",
+    "code": "COCKTAIL",
     "inDate": "2018-06-09",
     "outDate": "2018-06-12",
-    "roomType": {
+    "pubType": {
       "review": 109.00,
       "code": "KNG",
       "description": "Maximum 5 people to reserve"

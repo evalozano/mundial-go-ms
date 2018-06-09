@@ -22,11 +22,11 @@
         "description": "A 5-minute walk from Ulitsa Mezhdunarodnaya",
         "address": {
             "streetNumber": "2",
-            "streetName": "3rd St",
-            "city": "San Francisco",
-            "state": "CA",
-            "country": "United States",
-            "postalCode": "94103",
+            "streetName": "Ulitsa Parusnaya",
+            "city": "Krasnodarskiy kray",
+            "state": "RU",
+            "country": "Rusia",
+            "postalCode": "354340",
             "lat": 43.403758,
             "lon": 39.961621
         }

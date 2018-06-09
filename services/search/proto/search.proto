@@ -2,10 +2,9 @@ syntax = "proto3";
 
 package search;
 
-// Search service returns best pub chocies for a user.
+// Search service returns best pub chocies near stadium.
 service Search {
   rpc Nearby(NearbyRequest) returns (SearchResult);
-  // rpc City(CityRequest) returns (SearchResult);
 }
 
 message NearbyRequest {
@@ -14,13 +13,6 @@ message NearbyRequest {
   string inDate = 3;
   string outDate = 4;
 }
-
-// TODO(hw): add city search endpoint
-// message CityRequest {
-//   string city = 1;
-//   string inDate = 2;
-//   string outDate = 3;
-// }
 
 message SearchResult {
   repeated string pubIds = 1;

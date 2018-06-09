@@ -23,7 +23,7 @@ func NewServer(gc geo.GeoClient, rc rate.RateClient, tr opentracing.Tracer) *Ser
 	}
 }
 
-// Server implments the search service
+// Server implements the search service
 type Server struct {
 	geoClient  geo.GeoClient
 	rateClient rate.RateClient
@@ -66,11 +66,6 @@ func (s *Server) Nearby(ctx context.Context, req *pb.NearbyRequest) (*pb.SearchR
 	if err != nil {
 		log.Fatalf("rates error: %v", err)
 	}
-
-	// TODO(hw): add simple ranking algo to order pub ids:
-	// * geo distance
-	// * price (best discount?)
-	// * reviews
 
 	// build the response
 	res := new(pb.SearchResult)

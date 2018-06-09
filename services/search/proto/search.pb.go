@@ -37,7 +37,7 @@ func (m *NearbyRequest) Reset()         { *m = NearbyRequest{} }
 func (m *NearbyRequest) String() string { return proto.CompactTextString(m) }
 func (*NearbyRequest) ProtoMessage()    {}
 func (*NearbyRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_search_22ef3362cb153859, []int{0}
+	return fileDescriptor_search_8ed93c52c0389c1e, []int{0}
 }
 func (m *NearbyRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NearbyRequest.Unmarshal(m, b)
@@ -96,7 +96,7 @@ func (m *SearchResult) Reset()         { *m = SearchResult{} }
 func (m *SearchResult) String() string { return proto.CompactTextString(m) }
 func (*SearchResult) ProtoMessage()    {}
 func (*SearchResult) Descriptor() ([]byte, []int) {
-	return fileDescriptor_search_22ef3362cb153859, []int{1}
+	return fileDescriptor_search_8ed93c52c0389c1e, []int{1}
 }
 func (m *SearchResult) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SearchResult.Unmarshal(m, b)
@@ -201,10 +201,10 @@ var _Search_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("services/search/proto/search.proto", fileDescriptor_search_22ef3362cb153859)
+	proto.RegisterFile("services/search/proto/search.proto", fileDescriptor_search_8ed93c52c0389c1e)
 }
 
-var fileDescriptor_search_22ef3362cb153859 = []byte{
+var fileDescriptor_search_8ed93c52c0389c1e = []byte{
 	// 190 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x2a, 0x4e, 0x2d, 0x2a,
 	0xcb, 0x4c, 0x4e, 0x2d, 0xd6, 0x2f, 0x4e, 0x4d, 0x2c, 0x4a, 0xce, 0xd0, 0x2f, 0x28, 0xca, 0x2f,

@@ -22,14 +22,14 @@ message RatePlan {
   string code = 2;
   string inDate = 3;
   string outDate = 4;
-  RoomType roomType = 5;
+  PubType pubType = 5;
 }
 
-message RoomType {
+message PubType {
   double review = 1;
   double totalRate = 2;
   double totalRateInclusive = 3;
   string code = 4;
   string currency = 5;
-  string roomDescription = 6;
+  string pubDescription = 6;
 }
