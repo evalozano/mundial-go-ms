@@ -32,7 +32,6 @@ func (s *Server) Run(port int) error {
 	mux := tracing.NewServeMux(s.tracer)
 	mux.Handle("/", http.FileServer(http.Dir("services/frontend/static")))
 
-	// API
 	mux.Handle("/pubs", http.HandlerFunc(s.searchHandler))
 
 	return http.ListenAndServe(fmt.Sprintf(":%d", port), mux)
@@ -93,6 +92,7 @@ func geoJSONResponse(hs []*profile.Pub) map[string]interface{} {
 			"properties": map[string]string{
 				"name":         h.Name,
 				"phone_number": h.PhoneNumber,
+				"description": h.Description,
 			},
 			"geometry": map[string]interface{}{
 				"type": "Point",

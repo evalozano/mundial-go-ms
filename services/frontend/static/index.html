@@ -29,7 +29,8 @@
         });
 
         map.data.addListener('click', function (event) {
-            infowindow.setContent(event.feature.getProperty('name') + "<br>" + event.feature.getProperty('phone_number'));
+            infowindow.setContent(event.feature.getProperty('name') + "<br>" + event.feature.getProperty('phone_number')
+                    + "<br>" + event.feature.getProperty('description'));
             infowindow.setPosition(event.latLng);
             infowindow.setOptions({ pixelOffset: new google.maps.Size(0, -34) });
             infowindow.open(map);
